@@ -8,18 +8,13 @@ public class StandardParcel extends Parcel{
     }
 
     @Override
-    public void packageItem() {
-        super.packageItem();
-    }
-
-    @Override
     public void deliver() {
         super.deliver();
     }
 
     @Override
-    public int calculateDeliveryCost(int weight) {
-        return super.calculateDeliveryCost(weight);
+    public int calculateDeliveryCost() {
+        return super.calculateDeliveryCost();
     }
 
     @Override

@@ -3,6 +3,9 @@ package ru.yandex.practicum.delivery;
 public abstract class Parcel {
     //добавьте реализацию и другие необходимые классы
     protected String description;
+    protected int weight;
+    protected String deliveryAddress;
+    protected int sendDay;
 
     public int getWeight() {
         return weight;
@@ -11,13 +14,6 @@ public abstract class Parcel {
     public String getDescription() {
         return description;
     }
-
-    protected int weight;
-    protected String deliveryAddress;
-    protected int sendDay; // день месяца, в который посылка была отправлена. Для упрощения предполагаем,
-    // что посылки всегда доставляются в том же календарном месяце, что и отправляются, и сам месяц нас не интересует.
-    // Полноценную работу с датами в Java вы освоите чуть позже.
-
 
     public Parcel(String description, int weight, String deliveryAddress, int sendDay) {
         this.description = description;
@@ -34,9 +30,9 @@ public abstract class Parcel {
         System.out.println("Посылка <<" + description + ">> доставлена по адресу " + deliveryAddress);
     }
 
-    public int calculateDeliveryCost(int weight) {
-        return weight * getBaseCostPerUnit();
+    public int calculateDeliveryCost() {
+        return weight * getBaseCostPerUnit(); // к этому я долго еще буду привыкать:D
     }
 
-    protected abstract int getBaseCostPerUnit();
+    protected abstract int getBaseCostPerUnit(); // Спасибо=))
 }

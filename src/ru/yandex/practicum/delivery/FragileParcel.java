@@ -1,6 +1,6 @@
 package ru.yandex.practicum.delivery;
 
-public class FragileParcel extends Parcel implements Trackable{
+public class FragileParcel extends Parcel implements Trackable {
     private static final int COST_PER_UNIT = 4;
 
     public FragileParcel(String description, int weight, String deliveryAddress, int sendDay) {
@@ -11,16 +11,6 @@ public class FragileParcel extends Parcel implements Trackable{
     public void packageItem() {
         System.out.println("Посылка <<" + description + ">> обёрнута в защитную плёнку");
         super.packageItem();
-    }
-
-    @Override
-    public void deliver() {
-        super.deliver();
-    }
-
-    @Override
-    public int calculateDeliveryCost(int weight) {
-        return super.calculateDeliveryCost(weight);
     }
 
     @Override

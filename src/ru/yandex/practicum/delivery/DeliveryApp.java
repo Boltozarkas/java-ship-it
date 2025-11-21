@@ -119,7 +119,7 @@ public class DeliveryApp {
         // Посчитать общую стоимость всех доставок и вывести на экран
         int totalCost = 0;
         for (Parcel parcel : allParcels) {
-            totalCost += parcel.calculateDeliveryCost(parcel.weight);
+            totalCost += parcel.calculateDeliveryCost();
         }
         System.out.println("Общая стоимость доставки всех посылок: " + totalCost);
     }
