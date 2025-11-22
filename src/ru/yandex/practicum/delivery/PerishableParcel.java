@@ -9,19 +9,8 @@ public class PerishableParcel extends Parcel {
         this.timeToLive = timeToLive;
     }
 
-
     public boolean isExpired(int currentDay) {
         return (sendDay + timeToLive) < currentDay;
-    }
-
-    @Override
-    public void deliver() {
-        super.deliver();
-    }
-
-    @Override
-    public int calculateDeliveryCost() {
-        return super.calculateDeliveryCost();
     }
 
     @Override
